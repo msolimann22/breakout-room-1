@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include <cmath>
+
 #include <string.h>
 
 // A utility function that returns maximum of two integers
@@ -11,7 +11,8 @@ int Sack(int W, int wt[], int val[], int n)
 		return 0;
 	// If weight of the nth item is more than Knapsack capacity W, then this item cannot be included
 		// in the optimal solution
-		if (wt[n - 1] > W) {
+		if (wt[n - 1] > W) 
+		{
 			return Sack(W, wt, val, n - 1);
 		}
 			
@@ -19,8 +20,10 @@ int Sack(int W, int wt[], int val[], int n)
 	// (1) nth item included
 	// (2) not included
 		else
+		{
 			return max(val[n - 1] + Sack(W - wt[n - 1], wt, val, n - 1), Sack(W, wt,
 				val, n - 1));
+		}
 }
 // Driver code
 int main()
@@ -35,4 +38,5 @@ int main()
 // This code is contributed by rathbhupendra
 
 
-//I approve this code!  Abdelrahman Reda
+//I approve this code!  Abdelrahman Reda 
+//I approve to his approval Yazeed Ezzeldin
